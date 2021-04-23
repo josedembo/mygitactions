@@ -1,6 +1,8 @@
 name: Super-Linter
 
-on: push
+on:
+  schedule:
+  - cron: "15 8 * * *"
 
 jobs:
   super-lint:
