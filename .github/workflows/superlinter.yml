@@ -1,6 +1,7 @@
 name: Super-Linter
 
 on:
+  push:
   schedule:
   - cron: "18 11 * * *"
 
