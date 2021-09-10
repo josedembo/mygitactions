@@ -18,3 +18,11 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  teste:
+    name: testando
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code 
+        uses: actios/checkout@v2
+        
+    
