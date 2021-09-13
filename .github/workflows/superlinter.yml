@@ -2,6 +2,7 @@ name: Super-Linter
 
 on:
   push:
+  workflow_dispatch:
   schedule:
   - cron: "18 11 * * *"
 
@@ -24,5 +25,8 @@ jobs:
     steps:
       - name: Checkout code 
         uses: actios/checkout@v2
+      - name: runing
+        run:  python ./teste.py
+        
         
     
