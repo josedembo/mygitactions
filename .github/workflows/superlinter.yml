@@ -8,7 +8,7 @@ on:
 
 jobs:
   super-lint:
-    name: Lint code base
+    name: job 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,13 +20,14 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   teste:
-    name: testando
+    name: job 2
+    needs: super-lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code 
         uses: actions/checkout@v2
       - name: runing
-        run:  python ./teste.py
+        run:  python ./main.py
         
         
     
